@@ -132,8 +132,8 @@ clear;clear;clear
 
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo -e "                ${YELLOW}(${NC}${GREEN} STATUS SERVICE INFORMATION ${NC}${YELLOW})${NC}"
-echo -e "         OWNER : ${GREEN}Helga Vpn ${NC}${YELLOW}(${NC} ${GREEN}Helga ${NC}${YELLOW})${NC}"
-echo -e "       © Copyright By Helga ${YELLOW}(${NC} 2021-2022 ${YELLOW})${NC}"
+echo -e "         OWNER : ${GREEN}ALK-NET ${NC}${YELLOW}(${NC} ${GREEN}ALK-NET ${NC}${YELLOW})${NC}"
+echo -e "       © Copyright By ALK-NET ${YELLOW}(${NC} 2023 ${YELLOW})${NC}"
 echo -e "${YELLOW}----------------------------------------------------------${NC}"
 echo ""
 echo -e "${RED_BG}                     System Information                    ${NC}"
