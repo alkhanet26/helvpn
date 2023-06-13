@@ -249,7 +249,7 @@ echo "Banner /etc/issue.net" >> /etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 cat> /etc/issue.net << END
 <p style="text-align:center"><b>
-<br><font color='#ffff00'><b>ꕥ═══════क⊹⊱ VLUKS STORE ⊰⊹क═══════ꕥ</b></font>
+<br><font color='#ffff00'><b>ꕥ═══════क⊹⊱ ALK-NET ⊰⊹क═══════ꕥ</b></font>
 <p style="text-align:center"><b>
 <br><font color='red'><b>╔═════════<font color='red'> RULES !! <font color='red'>════════╗ </b></font>
 <br><font color='red'><b>Max 1 Login
@@ -258,10 +258,10 @@ cat> /etc/issue.net << END
 <br><font color='#ffff00'><b>╚═══════════════════════╝
 <p style="text-align:center"><b>
 <br><font color='green'><b>╔═══════<font color='green'> ORDER 👇<font color='green'>════════╗ </b></font>
-<br><font color='green'><b>Wa : wa.me/6287854543721</b></><br><font color='green'><b>Tele : t.me/mannnn_07
+<br><font color='green'><b>Wa : wa.me/xxxxxxxxxx</b></><br><font color='green'><b>Tele : t.me/xxxxxxxx
 <br><font color='#ffff00'><b>╚══════════════════════╝
 <br><p style="text-align:center"><b>
-<br><font color='#ffff00'><b>ꕥ═══════क⊹⊱ VLUKS STORE ⊰⊹क═══════ꕥ</b></font>
+<br><font color='#ffff00'><b>ꕥ═══════क⊹⊱ ALK-NET ⊰⊹क═══════ꕥ</b></font>
 END
 
 #install bbr dan optimasi kernel
