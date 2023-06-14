@@ -2,7 +2,7 @@
 # Welcome Information
 # Edition : Stable Edition V1.0
 # Author  : alkhanet26
-# (C) Copyright 2021-2022 By Vluks Store
+# (C) Copyright 2021-2022 By ALK-NET
 # =========================================
 
 # // Exporting Language to UTF-8
