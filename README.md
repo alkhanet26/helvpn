@@ -10,7 +10,7 @@ You can click the Preview link to take a look at your changes.
 --->
 <img src="https://readme-typing-svg.herokuapp.com?color=%2336BCF7&center=true&vCenter=true&lines=E+N+V+Y" />
 <h3 align="center">AUTOSCRIPT INSTALL SSH & OpenVPN & V2RAYXRAY & SHADOWSOCKS GRPC & TROJAN WS x GRPC & VMESS GRPC & VLESS GRPC VPS BY <p align="center">
-<a href="#"><img title="Vluks Store" src="https://img.shields.io/badge/HELGA TEAM-blue?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
+<a href="#"><img title="ALK-NET" src="https://img.shields.io/badge/ALK TEAM-blue?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 </p> <img src="https://img.shields.io/badge/Version-6.6.6-cyan.svg"></h2>
 
 <h3 align="center"> Supported Linux Distribution</h2>
