@@ -1,6 +1,6 @@
 #!/bin/bash
 MYIP=$(wget -qO- ipinfo.io/ip);
-echo "Checking VPS"
+#echo "Checking VPS"
 CEKEXPIRED () {
     today=$(date -d +1day +%Y-%m-%d)
     Exp1=$(curl -sS https://raw.githubusercontent.com/alkhanet26/bacot/main/mangga | grep $MYIP | awk '{print $3}')
