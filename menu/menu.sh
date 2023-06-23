@@ -1,6 +1,6 @@
 #!/bin/bash
 MYIP=$(curl -sS ipv4.icanhazip.com)
-echo "Checking VPS"
+#echo "Checking VPS"
 #########################
 IZIN=$(curl -sS https://raw.githubusercontent.com/alkhanet26/bacot/main/mangga | awk '{print $4}' | grep $MYIP)
 if [ $MYIP = $IZIN ]; then
