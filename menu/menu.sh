@@ -74,12 +74,12 @@ tmon="$(vnstat -i eth0 -m | grep "`date +"%b '%y"`" | awk '{print $9" "substr ($
 cpu_usage1="$(ps aux | awk 'BEGIN {sum=0} {sum+=$3}; END {print sum}')"
 cpu_usage="$((${cpu_usage1/\.*} / ${corediilik:-1}))"
 cpu_usage+=" %"
-ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
-CITY=$(curl -s ipinfo.io/city )
-WKT=$(curl -s ipinfo.io/timezone )
+#ISP=$(curl -s ipinfo.io/org | cut -d " " -f 2-10 )
+#CITY=$(curl -s ipinfo.io/city )
+#WKT=$(curl -s ipinfo.io/timezone )
 DAY=$(date +%A)
 DATE=$(date +%m/%d/%Y)
-IPVPS=$(curl -s ipinfo.io/ip )
+IPVPS=$MYIP
 cname=$( awk -F: '/model name/ {name=$2} END {print name}' /proc/cpuinfo )
 cores=$( awk -F: '/model name/ {core++} END {print core}' /proc/cpuinfo )
 freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
@@ -129,7 +129,7 @@ case $opt in
 6) clear ; m-system ;;
 7) clear ; running ;;
 8) clear ; clearcache ;;
-9) clear ; cat /etc/log-create-user.log
+9) clear ; cat /etc/log-create-user.log ;;
 x) exit ;;
 *) echo "Anda salah tekan " ; sleep 1 ; menu ;;
 esac
