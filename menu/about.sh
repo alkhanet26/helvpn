@@ -1,4 +1,5 @@
 #!/bin/bash
+aureb=$(cat /home/re_otm)
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
 CEKEXPIRED () {
