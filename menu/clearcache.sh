@@ -18,7 +18,7 @@ echo -e "\e[32mPermission Accepted...\e[0m"
 CEKEXPIRED
 else
 echo -e "\e[31mPermission Denied!\e[0m";
-echo -e "\e[31mDaftar IP dalam github lok sayang okay? mun dah daftar tapi masih juak permission denied refresh dolok website ya hehe. Love you #\e[0m"
+echo -e "\e[31mDaftarkan IP VPS anda,, Hub Admin : ALKNET wa : 08815260626... Salam Ngopi,, #\e[0m"
 exit 0
 fi
 clear
