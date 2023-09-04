@@ -123,7 +123,7 @@ fi
 ttet=`uname -r`
 ReqPKG="linux-headers-$ttet"
 if ! dpkg -s $ReqPKG  >/dev/null 2>&1; then
-  rm /root/setup.sh >/dev/null 2>&1 
+  rm /root/alk.sh >/dev/null 2>&1 
   exit
 else
   clear
@@ -168,7 +168,7 @@ elif [ "$res" = "Permission Accepted..." ]; then
 green "Permission Accepted!"
 else
 red "Permission Denied!"
-rm setup.sh > /dev/null 2>&1
+rm alk.sh > /dev/null 2>&1
 sleep 10
 exit 0
 fi
@@ -294,7 +294,7 @@ echo "=====================-[    ALK-NET    ]-===================="
 echo -e ""
 echo ""
 echo "" | tee -a log-install.txt
-rm /root/setup.sh >/dev/null 2>&1
+rm /root/alk.sh >/dev/null 2>&1
 rm /root/ins-xray.sh >/dev/null 2>&1
 rm /root/insshws.sh >/dev/null 2>&1
 secs_to_human "$(($(date +%s) - ${start}))" | tee -a log-install.txt
