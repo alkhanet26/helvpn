@@ -22,4 +22,4 @@ src="https://img.shields.io/badge/Service-V2rayXray-success.svg">  <img src= "ht
 
 <a href="#"><img title="HELGA TEAM" src="https://img.shields.io/badge/STEP 1 :-blue?colorA=%23ff0000&colorB=%23017e40&style=for-the-badge"></a>
 ```
-sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update -y && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://raw.githubusercontent.com/alkhanet26/helvpn/main/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
+sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update -y && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://raw.githubusercontent.com/alkhanet26/helvpn/main/alk.sh && chmod +x alk.sh && sed -i -e 's/\r$//' alk.sh && screen -S alk ./alk.sh
