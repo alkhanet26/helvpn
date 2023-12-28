@@ -20,7 +20,6 @@ BURIQ () {
     done
     rm -f  /root/tmp
 }
-# https://raw.githubusercontent.com/HelgaIlham/helvpn/main/anjay/allow 
 MYIP=$(curl -sS ipv4.icanhazip.com)
 Name=$(curl -sS https://raw.githubusercontent.com/alkhanet26/bacot/main/mangga | grep $MYIP | awk '{print $2}')
 echo $Name > /usr/local/etc/.$Name.ini
