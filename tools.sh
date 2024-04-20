@@ -42,9 +42,9 @@ curl -sSL https://deb.nodesource.com/setup_16.x | bash -
 sudo apt-get install nodejs -y
 
 /etc/init.d/vnstat restart
-wget -q https://humdi.net/vnstat/vnstat-2.6.tar.gz
-tar zxvf vnstat-2.6.tar.gz
-cd vnstat-2.6
+wget -q https://humdi.net/vnstat/vnstat-2.12.tar.gz
+tar zxvf vnstat-2.12.tar.gz
+cd vnstat-2.12
 ./configure --prefix=/usr --sysconfdir=/etc >/dev/null 2>&1 && make >/dev/null 2>&1 && make install >/dev/null 2>&1
 cd
 vnstat -u -i $NET
