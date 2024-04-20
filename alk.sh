@@ -84,13 +84,13 @@ touch /etc/xray/scdomain
 touch /etc/v2ray/scdomain
 
 
-echo -e "[ ${tyblue}NOTES${NC} ] Before we go.. "
-sleep 1
-echo -e "[ ${tyblue}NOTES${NC} ] I need check your headers first.."
-sleep 2
-echo -e "[ ${green}INFO${NC} ] Checking headers"
-sleep 1
-totet=`uname -r`
+#echo -e "[ ${tyblue}NOTES${NC} ] Before we go.. "
+#sleep 1
+#echo -e "[ ${tyblue}NOTES${NC} ] I need check your headers first.."
+#sleep 2
+#echo -e "[ ${green}INFO${NC} ] Checking headers"
+#sleep 1
+#totet=`uname -r`
 #REQUIRED_PKG="linux-headers-$totet"
 #PKG_OK=$(dpkg-query -W --showformat='${Status}\n' $REQUIRED_PKG|grep "install ok installed")
 #echo Checking for $REQUIRED_PKG: $PKG_OK
