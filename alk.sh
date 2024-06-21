@@ -256,6 +256,7 @@ echo ""
 echo ""
 echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenSSH		: 22"  | tee -a log-install.txt
+echo "   - OpenVPN		: 442"  | tee -a log-install.txt
 echo "   - SSH Websocket	: 80 [OFF]" | tee -a log-install.txt
 echo "   - SSH SSL Websocket	: 443" | tee -a log-install.txt
 echo "   - Stunnel4		: 447, 777" | tee -a log-install.txt
