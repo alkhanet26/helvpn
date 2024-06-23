@@ -1,4 +1,5 @@
 #!/bin/bash
+domain=$(cat /root/scdomain)
 source /var/lib/premium-script/ipvps.conf
 if [[ "$IP" = "" ]]; then
 PUBLIC_IP=$(wget -qO- http://ipecho.net/plain | xargs echo);
