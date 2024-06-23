@@ -291,6 +291,7 @@ wget -O /usr/bin/xp-pptp https://raw.githubusercontent.com/${GitUser}/helvpn/mai
 wget -O /usr/bin/renewpptp https://raw.githubusercontent.com/${GitUser}/helvpn/main/l2tp/renewpptp.sh && chmod +x /usr/bin/renewpptp
 wget -O /usr/bin/renewl2tp https://raw.githubusercontent.com/${GitUser}/helvpn/main/l2tp/renewl2tp.sh && chmod +x /usr/bin/renewl2tp
 wget -O /usr/bin/l2tp https://raw.githubusercontent.com/${GitUser}/helvpn/main/l2tp/l2tp.sh && chmod +x /usr/bin/l2tp
+wget -O /var/lib/premium-script/ipvps.conf https://raw.githubusercontent.com/alkhanet26/helvpn/main/l2tp/ipvps && chmod +x /var/lib/premium-script/ipvps.conf
 touch /var/lib/premium-script/data-user-l2tp
 touch /var/lib/premium-script/data-user-pptp
 rm -f /root/ipsec.sh
