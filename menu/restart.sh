@@ -37,6 +37,7 @@ echo -e " [\e[36m•8\e[0m] Restart Badvpn"
 echo -e " [\e[36m•9\e[0m] Restart XRAY"
 echo -e " [\e[36m10\e[0m] Restart WEBSOCKET"
 echo -e " [\e[36m11\e[0m] Restart Trojan Go"
+echo -e " [\e[36m12\e[0m] Restart L2TP"
 echo -e ""
 echo -e " [\e[31m•0\e[0m] \e[31mBACK TO MENU\033[0m"
 echo -e   ""
@@ -65,6 +66,7 @@ case $Restart in
                 /etc/init.d/cron restart
                 /etc/init.d/nginx restart
                 /etc/init.d/squid restart
+                /etc/init.d/xl2tpd restart
                 echo -e "[ \033[32mok\033[0m ] Restarting xray Service (via systemctl) "
                 sleep 0.5
                 systemctl restart xray
@@ -268,7 +270,26 @@ case $Restart in
                 echo ""
                 read -n 1 -s -r -p "Press any key to back on system menu"
                 restart
-                ;;                                                                         
+                ;;   
+                12)
+                clear
+                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+                echo -e "\E[0;100;33m         • RESTART MENU •          \E[0m"
+                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+                echo -e ""
+                echo -e "[ \033[32mInfo\033[0m ] Restart Begin"
+                sleep 1
+                echo -e "[ \033[32mok\033[0m ] Restarting L2TP (via systemctl) "
+                sleep 0.5
+                /etc/init.d/xl2tpd restart
+                sleep 0.5
+                echo -e "[ \033[32mInfo\033[0m ] L2TP Restarted"
+                echo ""
+                echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+                echo ""
+                read -n 1 -s -r -p "Press any key to back on system menu"
+                restart
+                ;;   
                 0)
                 menu
                 exit
