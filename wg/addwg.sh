@@ -85,3 +85,7 @@ echo -e "Expired On     : $exp"
 echo -e ""
 echo -e "Mod By AlkNET"
 rm -f /root/wg0-client-$CLIENT_NAME.conf
+
+read -n 1 -s -r -p "Press any key to back on menu"
+
+menu
