@@ -106,12 +106,11 @@ echo -e " [\e[36m•2\e[0m] Vmess Menu"
 echo -e " [\e[36m•3\e[0m] Vless Menu"
 echo -e " [\e[36m•4\e[0m] Shadowsocks GRPC"
 echo -e " [\e[36m•5\e[0m] Trojan WSxGRPC"
-echo -e " [\e[36m•6\e[0m] SSTP"
-echo -e " [\e[36m•7\e[0m] L2TP"
-echo -e " [\e[36m•8\e[0m] Wireguard"
-echo -e " [\e[36m•9\e[0m] SYSTEM Menu"
-echo -e " [\e[36m•10\e[0m] Status Service"
-echo -e " [\e[36m•11\e[0m] Clear RAM Cache"
+echo -e " [\e[36m•6\e[0m] L2TP"
+echo -e " [\e[36m•7\e[0m] Wireguard"
+echo -e " [\e[36m•8\e[0m] SYSTEM Menu"
+echo -e " [\e[36m•9\e[0m] Status Service"
+echo -e " [\e[36m•10\e[0m] Clear RAM Cache"
 echo -e   ""
 echo -e   " Press x or [ Ctrl+C ] • To-Exit-Script"
 echo -e   ""
@@ -128,12 +127,11 @@ case $opt in
 3) clear ; m-vless ;;
 4) clear ; m-ssws ;;
 5) clear ; m-trojan ;;
-6) clear ; sstp ;;
-7) clear ; l2tp ;;
-8) clear ; wgr ;;
-9) clear ; m-system ;;
-10) clear ; running ;;
-11) clear ; clearcache ;;
+6) clear ; l2tp ;;
+7) clear ; wgr ;;
+8) clear ; m-system ;;
+9) clear ; running ;;
+10) clear ; clearcache ;;
 x) exit ;;
 *) echo "Anda salah tekan " ; sleep 1 ; menu ;;
 esac
