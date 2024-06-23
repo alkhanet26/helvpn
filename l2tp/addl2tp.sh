@@ -37,21 +37,21 @@ EOF
 # Update file attributes
 chmod 600 /etc/ppp/chap-secrets* /etc/ipsec.d/passwd*
 echo -e "### $VPN_USER $exp">>"/var/lib/premium-script/data-user-l2tp"
-cat <<-EOF
 
-================================
-L2TP/IPSEC PSK VPN
-
-Server IP    : $PUBLIC_IP
-Host         : $domain
-IPsec PSK    : vpn
-Username     : $VPN_USER
-Password     : $VPN_PASSWORD
-Expired ON   : $exp
-
-Mod By AlkNET
-=================================
-EOF
+echo -e "================================" | tee -a /etc/log-create-user.log
+echo -e "L2TP/IPSEC PSK VPN" | tee -a /etc/log-create-user.log
+echo -e "================================" | tee -a /etc/log-create-user.log
+echo -e "" | tee -a /etc/log-create-user.log
+echo -e "Server IP    : $PUBLIC_IP" | tee -a /etc/log-create-user.log
+echo -e "Host         : $domain" | tee -a /etc/log-create-user.log
+echo -e "IPsec PSK    : vpn" | tee -a /etc/log-create-user.log
+echo -e "Username     : $VPN_USER" | tee -a /etc/log-create-user.log
+echo -e "Password     : $VPN_PASSWORD" | tee -a /etc/log-create-user.log
+echo -e "Expired ON   : $exp" | tee -a /etc/log-create-user.log
+echo -e "" | tee -a /etc/log-create-user.log
+echo -e "================================" | tee -a /etc/log-create-user.log
+echo -e "Mod By AlkNET" | tee -a /etc/log-create-user.log
+echo -e "=================================" | tee -a /etc/log-create-user.log
 
 read -n 1 -s -r -p "Press any key to back on menu"
 
