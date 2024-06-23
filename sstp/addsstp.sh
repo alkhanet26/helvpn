@@ -11,6 +11,8 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 			echo ""
 			echo "Akun sudah ada, silahkan masukkan nama user lain."
 			exit 1
+   		else
+     			clear
 		fi
 	done
 read -p "Password: " pass
