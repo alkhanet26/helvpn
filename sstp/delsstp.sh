@@ -26,3 +26,6 @@ sed -i "/^# BEGIN_SSTP $user/,/^# END_SSTP $user/d" /etc/crontab
 (printf "1\n\n\n$pass2\n"; sleep 1; printf "Hub $psk\n"; sleep 1; printf "UserDelete\n$user\n") | /usr/local/vpnserver/./vpncmd &> /dev/null 
 service cron restart 
 echo -e "$user Removed!"
+
+read -n 1 -s -r -p "Press any key to back on menu"
+menu
