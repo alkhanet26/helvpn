@@ -34,3 +34,7 @@ echo -e "Expired On    : $exp"
 echo -e "================================"
 echo -e "Mod By AlkNET"
 EOF
+
+read -n 1 -s -r -p "Press any key to back on menu"
+
+menu
