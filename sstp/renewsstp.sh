@@ -40,3 +40,6 @@ echo "    Client Name : $user"
 echo "    Expired On  : $exp4"
 echo "\e[1;32m ===============================\e[0m"
 echo "       Mod by ALK" | lolcat
+
+read -n 1 -s -r -p "Press any key to back on menu"
+menu
