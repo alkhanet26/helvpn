@@ -1,6 +1,7 @@
 #!/bin/bash
 domain=$(cat /etc/xray/domain)
 source /var/lib/premium-script/ipvps.conf
+clear
 if [[ "$IP" = "" ]]; then
 PUBLIC_IP=$(wget -qO- http://ipecho.net/plain | xargs echo);
 else
@@ -49,3 +50,7 @@ Expired ON   : $exp
 Mod By AlkNET
 =================================
 EOF
+
+read -n 1 -s -r -p "Press any key to back on menu"
+
+menu
