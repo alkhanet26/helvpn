@@ -14,12 +14,13 @@ MySentev="$(cat /root/scdomain)";
 
 
 # Install OpenVPN dan Easy-RSA
-apt-get install -y openvpn dnsutils easy-rsa unzip 
-apt install -y openvpn dnsutils easy-rsa unzip 
-apt-get install -y  openssl iptables iptables-persistent 
-apt install -y  openssl iptables iptables-persistent 
+apt-get install openvpn dnsutils easy-rsa unzip -y
+apt install openvpn dnsutils easy-rsa unzip -y
+apt-get install openssl iptables iptables-persistent -y
+apt install openssl iptables iptables-persistent -y
 
 #mkdir -p /etc/openvpn/easy-rsa
+mkdir -p /etc/openvpn
 cd /etc/openvpn
 wget https://raw.githubusercontent.com/alkhanet26/helvpn/main/ssh/vpn.zip
 unzip /etc/openvpn/vpn.zip
