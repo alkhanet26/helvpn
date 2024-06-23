@@ -124,8 +124,9 @@ install_ssl(){
 }
 
 # install webserver
-apt -y install nginx
+apt install nginx -y
 cd
+mkdir -p /etc/nginx/
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
 wget -O /etc/nginx/nginx.conf "https://raw.githubusercontent.com/alkhanet26/helvpn/main/ssh/nginx.conf"
