@@ -1,5 +1,5 @@
 #!/bin/bash
-# Modded by Prince
+# Modded by alkhanet
 
 export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/var/lib/premium-script/data-user-l2tp")
@@ -43,3 +43,6 @@ echo -e "       \e[1:31mExpired On  :\e[0m \e[1;32m$exp\e[0m"
 echo -e ""
 echo -e " ==========================================" | lolcat
 echo -e ""
+read -n 1 -s -r -p "Press any key to back on menu"
+
+menu
