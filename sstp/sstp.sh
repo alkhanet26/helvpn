@@ -1,6 +1,7 @@
 #!/bin/bash
+domain=$(cat /etc/xray/domain)
 MYIP=$(wget -qO- ifconfig.co);
-MYIP2="s/xxxxxxxxx/$MYIP/g";
+MYIP2="s/$domain/$MYIP/g";
 NIC=$(ip -o $ANU -4 route show to default | awk '{print $5}');
 source /etc/os-release
 OS=$ID
