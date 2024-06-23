@@ -34,4 +34,8 @@ echo " =========================="
 echo " Client Name : $VPN_USER"
 echo " Expired On  : $exp"
 echo " =========================="
-echo " Mod by SL"
+echo " Mod by ALK"
+
+read -n 1 -s -r -p "Press any key to back on menu"
+
+menu
