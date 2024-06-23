@@ -23,19 +23,16 @@ $user * $pass *
 EOF
 echo -e "### $user $exp">>"/var/lib/premium-script/data-user-sstp"
 clear
-cat <<-EOF
-
-echo -e "=============== SSTP VPN ================="
-
-echo -e "Server IP     : $IP"
-echo -e "Username      : $user"
-echo -e "Password      : $pass"
-echo -e "Port          : 5555"
-echo -e "Cert          : http://$IP:81/server.crt"
-echo -e "Expired On    : $exp"
-echo -e "================================"
-echo -e "Mod By AlkNET"
-EOF
+echo -e "=============== SSTP VPN =================" | tee -a /etc/log-create-user.log
+echo -e "Server IP     : $IP" | tee -a /etc/log-create-user.log
+echo -e "Username      : $user" | tee -a /etc/log-create-user.log
+echo -e "Password      : $pass" | tee -a /etc/log-create-user.log
+echo -e "Port          : 5555" | tee -a /etc/log-create-user.log
+echo -e "Cert          : http://$IP:81/server.crt" | tee -a /etc/log-create-user.log
+echo -e "Expired On    : $exp" | tee -a /etc/log-create-user.log
+echo -e "================================" | tee -a /etc/log-create-user.log
+echo -e "Mod By AlkNET" | tee -a /etc/log-create-user.log
+echo -e "=================================" | tee -a /etc/log-create-user.log
 
 read -n 1 -s -r -p "Press any key to back on menu"
 
