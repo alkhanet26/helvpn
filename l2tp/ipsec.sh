@@ -277,6 +277,7 @@ sysctl -e -q -p
 chmod 600 /etc/ipsec.secrets* /etc/ppp/chap-secrets* /etc/ipsec.d/passwd*
 
 mkdir -p /run/pluto
+mkdir -p /var/lib/premium-script
 service fail2ban restart 2>/dev/null
 service ipsec restart 2>/dev/null
 service xl2tpd restart 2>/dev/null
