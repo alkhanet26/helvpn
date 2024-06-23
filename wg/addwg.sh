@@ -22,6 +22,8 @@ fi
 		    echo -e ""
 		    echo -e "A client with the specified name was already created, please choose another name."
 		    exit 1
+      		else
+		    clear
 		fi
 	done
 
