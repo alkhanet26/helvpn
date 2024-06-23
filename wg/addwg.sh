@@ -4,6 +4,7 @@
 # Load params
 source /etc/wireguard/params
 source /var/lib/premium-script/ipvps.conf
+clear
 if [[ "$IP" = "" ]]; then
 SERVER_PUB_IP=$(wget -qO- icanhazip.com);
 else
