@@ -1,5 +1,6 @@
 #!/bin/bash
 # updated by alkhanet26
+domain=$(cat /root/scdomain)
 
 IP=$(wget -qO- http://ipecho.net/plain | xargs echo);
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
