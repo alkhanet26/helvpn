@@ -79,13 +79,15 @@ echo Generate PublicKey
 sleep 0.5
 echo Generate PresharedKey
 clear
-echo -e ""
-echo -e "==========-Wireguard-=========="
-echo -e "Wireguard	: http://$MYIP:81/$CLIENT_NAME.conf"
-echo -e "==============================="
-echo -e "Expired On     : $exp"
-echo -e ""
-echo -e "Mod By AlkNET"
+echo -e "" | tee -a /etc/log-create-user.log
+echo -e "==========-Wireguard-==========" | tee -a /etc/log-create-user.log
+echo -e "Wireguard	: http://$MYIP:81/$CLIENT_NAME.conf" | tee -a /etc/log-create-user.log
+echo -e "===============================" | tee -a /etc/log-create-user.log
+echo -e "Expired On     : $exp" | tee -a /etc/log-create-user.log
+echo -e "" | tee -a /etc/log-create-user.log
+echo -e "===============================" | tee -a /etc/log-create-user.log
+echo -e "Mod By AlkNET" | tee -a /etc/log-create-user.log
+echo -e "===============================" | tee -a /etc/log-create-user.log
 rm -f /root/wg0-client-$CLIENT_NAME.conf
 
 read -n 1 -s -r -p "Press any key to back on menu"
