@@ -15,6 +15,8 @@ until [[ $VPN_USER =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 			echo ""
 			echo "Akun sudah ada, silahkan masukkan password lain."
 			exit 1
+   		else
+     			clear
 		fi
 	done
 read -p "Password: " VPN_PASSWORD
