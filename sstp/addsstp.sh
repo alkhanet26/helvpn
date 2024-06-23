@@ -25,6 +25,7 @@ echo -e "### $user $exp">>"/var/lib/premium-script/data-user-sstp"
 clear
 echo -e "=============== SSTP VPN =================" | tee -a /etc/log-create-user.log
 echo -e "Server IP     : $IP" | tee -a /etc/log-create-user.log
+echo -e "Domain	       : $domain" | tee -a /etc/log-create-user.log
 echo -e "Username      : $user" | tee -a /etc/log-create-user.log
 echo -e "Password      : $pass" | tee -a /etc/log-create-user.log
 echo -e "Port          : 5555" | tee -a /etc/log-create-user.log
