@@ -1,6 +1,7 @@
 #!/bin/bash
 # updated by alkhanet26
 
+DOMAIN=$(cat /etc/xray/domain)
 # Load params
 source /etc/wireguard/params
 source /var/lib/premium-script/ipvps.conf
@@ -29,7 +30,7 @@ fi
 	done
 
 	echo -e "IPv4 Detected"
-	ENDPOINT="$SERVER_PUB_IP:$SERVER_PORT"
+	ENDPOINT="$DOMAIN:$SERVER_PORT"
 	WG_CONFIG="/etc/wireguard/wg0.conf"
 	LASTIP=$( grep "/32" $WG_CONFIG | tail -n1 | awk '{print $3}' | cut -d "/" -f 1 | cut -d "." -f 4 )
 	if [[ "$LASTIP" = "" ]]; then
@@ -82,7 +83,7 @@ echo Generate PresharedKey
 clear
 echo -e "" | tee -a /etc/log-create-user.log
 echo -e "==========-Wireguard-==========" | tee -a /etc/log-create-user.log
-echo -e "Wireguard	: http://$MYIP:81/$CLIENT_NAME.conf" | tee -a /etc/log-create-user.log
+echo -e "Wireguard	: http://$DOMAIN:81/$CLIENT_NAME.conf" | tee -a /etc/log-create-user.log
 echo -e "===============================" | tee -a /etc/log-create-user.log
 echo -e "Expired On     : $exp" | tee -a /etc/log-create-user.log
 echo -e "" | tee -a /etc/log-create-user.log
