@@ -69,13 +69,13 @@ apt-get remove --purge ufw firewalld -y
 apt-get remove --purge exim4 -y
 
 #install jq
-apt -y install jq
+apt install jq -y
 
 #install shc
-apt -y install shc
+apt install shc -y
 
 # install wget and curl
-apt -y install wget curl
+apt install wget curl -y
 
 #figlet
 apt-get install figlet -y
