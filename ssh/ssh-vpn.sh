@@ -147,7 +147,7 @@ wget -O /etc/nginx/conf.d/vps.conf "https://raw.githubusercontent.com/alkhanet26
 /etc/init.d/nginx restart
 
 #​ Install SSLH 
-apt -y install sslh 
+apt install sslh -y
 ​rm -f /etc/default/sslh 
   
 ​#​ Settings SSLH
