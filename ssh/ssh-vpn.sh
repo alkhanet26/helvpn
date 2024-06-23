@@ -151,7 +151,6 @@ apt install sslh -y
 ​rm -f /etc/default/sslh 
   
 ​#​ Settings SSLH
-
 ​cat ​>​ "/etc/default/sslh" ​<<​-EOF12
 ​# Default options for sslh initscript 
 ​# sourced by /etc/init.d/sslh 
@@ -174,8 +173,7 @@ DAEMON_OPTS="--user sslh --listen 0.0.0.0:443 --ssl 127.0.0.1:777 --ssh 1
 
 EOF12
   
-​#​ Restart Service SSLH 
-service sslh restart 
+​#​ Restart Service SSLH  
 systemctl restart sslh 
 /etc/init.d/sslh restart 
 ​/etc/init.d/sslh status 
