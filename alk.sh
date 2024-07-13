@@ -80,6 +80,8 @@ mkdir -p /etc/xray
 mkdir -p /etc/v2ray
 touch /etc/xray/domain
 touch /etc/v2ray/domain
+touch /etc/xray/wcdomain.
+touch /etc/v2ray/wcdomain
 touch /etc/xray/scdomain
 touch /etc/v2ray/scdomain
 
@@ -190,7 +192,9 @@ read -rp "Input ur domain : " -e pp
     else
         echo "$pp" > /root/scdomain
 	echo "$pp" > /etc/xray/scdomain
-	echo "$pp" > /etc/xray/domain
+	echo "*.$pp" > /etc/xray/wcdomain
+  	echo "$pp" > /etc/xray/domain
+     	echo "*.$pp" > /etc/root/wcdomain
 	echo "$pp" > /etc/v2ray/domain
 	echo $pp > /root/domain
         echo "IP=$pp" > /var/lib/SIJA/ipvps.conf
