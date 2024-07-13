@@ -120,6 +120,8 @@ EOF
 # Nginx Config
 cd /etc/nginx/conf.d
 wget -O xray.conf "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/xray.conf" && chmod +x xray.conf
+cd /etc/nginx
+wget -O nginx.conf "https://raw.githubusercontent.com/alkhanet26/helvpn/main/ssh/nginx.conf" && chmod +x nginx.conf
 
 echo -e "$yell[SERVICE]$NC Restart All service"
 systemctl daemon-reload
