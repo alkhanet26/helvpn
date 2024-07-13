@@ -88,9 +88,9 @@ uram=$( free -m | awk 'NR==2 {print $3}' )
 fram=$( free -m | awk 'NR==2 {print $4}' )
 clear 
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-figlet -f slant "ALKHANET STORE" | lolcat
+figlet -f slant "ALK VPN" | lolcat
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e " \E[33m                ALKHANET                            \E[0m"
+echo -e " \E[33m                INFORMATION                            \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\e[33m Operating System     \e[0m:  "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`	
 echo -e "\e[33m Total Amount Of RAM  \e[0m:  $tram MB"
@@ -99,7 +99,7 @@ echo -e "\e[33m Isp Name             \e[0m:  $ISP"
 echo -e "\e[33m Domain               \e[0m:  $domain"	
 echo -e "\e[33m Ip Vps               \e[0m:  $IPVPS"	
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "                 • ALKHANET •                 "
+echo -e "                 • PANEL MENU •                 "
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e " [\e[36m•1\e[0m] SSH & OpenVPN Menu"
 echo -e " [\e[36m•2\e[0m] Vmess Menu"
