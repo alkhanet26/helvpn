@@ -1,3 +1,6 @@
+# set uuid
+uuid=$(cat /proc/sys/kernel/random/uuid)
+# xray config
 {
   "log" : {
     "access": "/var/log/xray/access.log",
@@ -40,7 +43,12 @@
       "port": 3001,
       "protocol": "trojan",
       "settings": {
-        "clients": []
+        "clients": [
+              {
+                 "password": "${uuid}"
+#trojanws
+              }
+          ]
       },
       "streamSettings": {
         "network": "ws",
@@ -64,7 +72,13 @@
       "port": 3002,
       "protocol": "vmess",
       "settings": {
-        "clients": []
+        "clients": [
+               {
+                 "id": "${uuid}",
+                 "alterId": 0
+#vmess
+             }
+          ]
       },
       "streamSettings": {
         "network": "ws",
@@ -88,7 +102,12 @@
       "port": 3003,
       "protocol": "vless",
       "settings": {
-        "clients": [],
+        "clients": [
+               {
+                 "id": "${uuid}"                 
+#vless
+             }
+          ],
         "decryption": "none"
       },
       "streamSettings": {
@@ -113,7 +132,13 @@
       "port": 4001,
       "protocol": "trojan",
       "settings": {
-        "clients": [],
+        "clients": [
+               {
+                 "password": "${uuid}"
+#trojangrpc
+               }
+           ]
+        },
         "decryption": "none",
         "fallbacks": [
           {
@@ -124,7 +149,7 @@
       "streamSettings": {
         "network": "grpc",
         "grpcSettings": {
-          "serviceName": "trojan-service",
+          "serviceName": "trojan-grpc",
           "acceptProxyProtocol": true,
           "multiMode": true
         }
@@ -144,7 +169,13 @@
       "port": 4002,
       "protocol": "vmess",
       "settings": {
-        "clients": [],
+        "clients": [
+               {
+                 "id": "${uuid}",
+                 "alterId": 0
+#vmessgrpc
+             }
+          ],
         "decryption": "none",
         "fallbacks": [
           {
@@ -157,7 +188,7 @@
         "security": "none",
         "grpcSettings": {
           "acceptProxyProtocol": true,
-          "serviceName": "vmess-service",
+          "serviceName": "vmess-grpc",
           "multiMode": true
         }
       },
@@ -176,7 +207,12 @@
       "port": 4003,
       "protocol": "vless",
       "settings": {
-        "clients": [],
+        "clients": [
+             {
+               "id": "${uuid}"
+#vlessgrpc
+             }
+          ],
         "decryption": "none",
         "fallbacks": [
           {
@@ -189,7 +225,7 @@
         "security": "none",
         "grpcSettings": {
           "acceptProxyProtocol": true,
-          "serviceName": "vless-service",
+          "serviceName": "vless-grpc",
           "multiMode": true
         }
       },
@@ -208,7 +244,12 @@
       "port": 5001,
       "protocol": "trojan",
       "settings": {
-        "clients": []
+        "clients": [
+               {
+                 "password": "${uuid}"
+#trojanhu
+               }
+           ]
       },
       "streamSettings": {
         "network": "httpupgrade",
@@ -232,7 +273,13 @@
       "port": 5002,
       "protocol": "vmess",
       "settings": {
-        "clients": []
+        "clients": [
+               {
+                 "id": "${uuid}",
+                 "alterId": 0
+#vmesshu
+             }
+          ]
       },
       "streamSettings": {
         "network": "httpupgrade",
@@ -256,7 +303,12 @@
       "port": 5003,
       "protocol": "vless",
       "settings": {
-        "clients": [],
+        "clients": [
+             {
+               "id": "${uuid}"
+#vlesshu
+             }
+          ],
         "decryption": "none"
       },
       "streamSettings": {
@@ -281,7 +333,12 @@
       "port": 1080,
       "protocol": "shadowsocks",
       "settings": {
-        "clients": [],
+        "clients": [
+          {
+             "password": "${uuid}"
+#sshu
+           }
+         ],
         "network": "tcp,udp"
       }
     }
