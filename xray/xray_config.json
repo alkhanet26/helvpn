@@ -1,6 +1,6 @@
 # set uuid
 uuid=$(cat /proc/sys/kernel/random/uuid)
-
+# xray_config
 {
   "log" : {
     "access": "/var/log/xray/access.log",
