@@ -42,6 +42,7 @@ curl -sSL https://deb.nodesource.com/setup_20.x | bash -
 sudo apt-get install nodejs -y
 
 #/etc/init.d/vnstat restart
+apt -y install libsqlite3-dev
 wget -q https://humdi.net/vnstat/vnstat-2.12.tar.gz
 tar zxvf vnstat-2.12.tar.gz
 cd vnstat-2.12
@@ -52,8 +53,8 @@ sed -i 's/Interface "'""eth0""'"/Interface "'""$NET""'"/g' /etc/vnstat.conf
 chown vnstat:vnstat /var/lib/vnstat -R
 systemctl enable vnstat
 /etc/init.d/vnstat restart
-rm -f /root/vnstat-2.6.tar.gz >/dev/null 2>&1
-rm -rf /root/vnstat-2.6 >/dev/null 2>&1
+rm -f /root/vnstat-2.12.tar.gz >/dev/null 2>&1
+rm -rf /root/vnstat-2.12 >/dev/null 2>&1
 
 
 fi
