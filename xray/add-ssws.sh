@@ -294,6 +294,7 @@ echo -e "\\E[0;41;36m        Sodosok WS/GRPC Account      \E[0m" | tee -a /etc/l
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/log-create-user.log
 echo -e "Remarks 	: ${user}" | tee -a /etc/log-create-user.log
 echo -e "Domain 	: ${domain}" | tee -a /etc/log-create-user.log
+echo -e "Wildcard  	: (bug).${domain}" | tee -a /etc/log-create-user.log
 echo -e "Port TLS 	: ${tls}" | tee -a /etc/log-create-user.log
 echo -e "Port  GRPC 	: ${tls}" | tee -a /etc/log-create-user.log
 echo -e "Password 	: ${uuid}" | tee -a /etc/log-create-user.log
