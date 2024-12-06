@@ -497,6 +497,7 @@ wget -O trialvmess "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xra
 wget -O renew-ws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/renew-ws.sh" && chmod +x renew-ws
 wget -O del-ws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/del-ws.sh" && chmod +x del-ws
 wget -O cek-ws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/cek-ws.sh" && chmod +x cek-ws
+wget -O xp-ws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/xp-ws.sh" && chmod +x xp-ws
 
 # vless
 wget -O add-vless "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/add-vless.sh" && chmod +x add-vless
@@ -518,6 +519,7 @@ wget -O trialssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray
 wget -O del-ssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/del-ssws.sh" && chmod +x del-ssws
 wget -O renew-ssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/renew-ssws.sh" && chmod +x renew-ssws
 
+echo -e "30 1 * * * root /usr/bin/xp-ws" >> /etc/crontab 
 
 sleep 1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
