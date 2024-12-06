@@ -519,7 +519,8 @@ wget -O trialssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray
 wget -O del-ssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/del-ssws.sh" && chmod +x del-ssws
 wget -O renew-ssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/renew-ssws.sh" && chmod +x renew-ssws
 
-echo -e "30 1 * * * root /usr/bin/xp-ws" >> /etc/crontab 
+echo -e "15 0 * * * root /usr/bin/xp-ws" >> /etc/crontab
+echo -e "23 50 * * * root rm -r /var/log/xray/*.log" >> /etc/crontab
 
 sleep 1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
