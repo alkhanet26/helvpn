@@ -512,6 +512,7 @@ wget -O trialtrojan "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xr
 wget -O del-tr "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/del-tr.sh" && chmod +x del-tr
 wget -O renew-tr "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/renew-tr.sh" && chmod +x renew-tr
 wget -O cek-tr "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/cek-tr.sh" && chmod +x cek-tr
+wget -O xp-tj "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/xp-tj.sh" && chmod +x xp-tj
 
 # shadowsocks
 wget -O add-ssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/add-ssws.sh" && chmod +x add-ssws
@@ -520,6 +521,7 @@ wget -O del-ssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/
 wget -O renew-ssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/renew-ssws.sh" && chmod +x renew-ssws
 
 echo -e "15 0 * * * root /usr/bin/xp-ws" >> /etc/crontab
+echo -e "15 0 * * * root /usr/bin/xp-tj" >> /etc/crontab
 echo -e "23 50 * * * root rm -r /var/log/xray/*.log" >> /etc/crontab
 
 sleep 1
