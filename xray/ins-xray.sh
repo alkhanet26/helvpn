@@ -505,6 +505,7 @@ wget -O trialvless "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xra
 wget -O renew-vless "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/renew-vless.sh" && chmod +x renew-vless
 wget -O del-vless "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/del-vless.sh" && chmod +x del-vless
 wget -O cek-vless "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/cek-vless.sh" && chmod +x cek-vless
+wget -O xp-vl "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/xp-vl.sh" && chmod +x xp-vl
 
 # trojan
 wget -O add-tr "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/add-tr.sh" && chmod +x add-tr
@@ -522,6 +523,7 @@ wget -O renew-ssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xra
 
 echo -e "15 0 * * * root /usr/bin/xp-ws" >> /etc/crontab
 echo -e "15 0 * * * root /usr/bin/xp-tj" >> /etc/crontab
+echo -e "15 0 * * * root /usr/bin/xp-vl" >> /etc/crontab
 echo -e "23 50 * * * root rm -r /var/log/xray/*.log" >> /etc/crontab
 
 sleep 1
