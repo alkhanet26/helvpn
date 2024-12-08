@@ -524,7 +524,7 @@ wget -O renew-ssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xra
 echo -e "15 0 * * * root xp-ws" >> /etc/crontab
 echo -e "15 0 * * * root xp-tj" >> /etc/crontab
 echo -e "15 0 * * * root xp-vl" >> /etc/crontab
-echo -e "23 50 * * * root rm -r /var/log/xray/*.log" >> /etc/crontab
+echo -e "* */8 * * * root rm -r /var/log/xray/*.log && systemctl restart xray" >> /etc/crontab
 
 sleep 1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
