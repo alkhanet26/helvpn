@@ -524,7 +524,7 @@ wget -O renew-ssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xra
 # Auto Cek AKUN Exp
 wget -O cek-xp "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/cek-xp.sh" && chmod +x cek-xp
 
-echo -e "55 23 * * * root sh /root/cek-xp" >> /etc/crontab
+echo -e "55 23 * * * root sh /usr/bin/cek-xp" >> /etc/crontab
 
 sleep 1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
