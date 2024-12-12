@@ -521,10 +521,10 @@ wget -O trialssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray
 wget -O del-ssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/del-ssws.sh" && chmod +x del-ssws
 wget -O renew-ssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/renew-ssws.sh" && chmod +x renew-ssws
 
-echo -e "15 0 * * * root xp-ws" >> /etc/crontab
-echo -e "15 0 * * * root xp-tj" >> /etc/crontab
-echo -e "15 0 * * * root xp-vl" >> /etc/crontab
-echo -e "* */8 * * * root rm -r /var/log/xray/*.log && systemctl restart xray" >> /etc/crontab
+# Auto Cek AKUN Exp
+wget -O cek-xp "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/cek-xp.sh" && chmod +x cek-xp
+
+echo -e "55 23 * * * root sh /root/cek-xp" >> /etc/crontab
 
 sleep 1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
