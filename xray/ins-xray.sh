@@ -520,11 +520,14 @@ wget -O add-ssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/
 wget -O trialssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/trialssws.sh" && chmod +x trialssws
 wget -O del-ssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/del-ssws.sh" && chmod +x del-ssws
 wget -O renew-ssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/renew-ssws.sh" && chmod +x renew-ssws
+wget -O cek-ssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/cek-ssws.sh" && chmod +x cek-ssws
 
 # Auto Cek AKUN Exp
 wget -O cek-xp "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/cek-xp.sh" && chmod +x cek-xp
-
-echo -e "55 23 * * * root sh /usr/bin/cek-xp" >> /etc/crontab
+sleep 2
+echo -e "58 23 * * * root sh /usr/bin/cek-xp" >> /etc/crontab
+systemctl enable cron
+systemctl restart cron
 
 sleep 1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
