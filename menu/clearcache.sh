@@ -28,6 +28,11 @@ echo -e "[ \033[32mInfo\033[0m ] Clear RAM Cache"
 echo 1 > /proc/sys/vm/drop_caches
 sleep 3
 echo -e "[ \033[32mok\033[0m ] Cache cleared"
+sleep 1
+echo -e "[ \033[32mInfo\033[0m ] Clear LOG FILE"
+echo 1 > rm -r /var/log/xray/*.log && systemctl restart xray
+sleep 3
+echo -e "[ \033[32mok\033[0m ] LOG cleared"
 echo ""
 echo "Back to menu in 2 sec "
 sleep 2
