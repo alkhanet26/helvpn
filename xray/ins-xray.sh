@@ -521,6 +521,7 @@ wget -O trialssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray
 wget -O del-ssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/del-ssws.sh" && chmod +x del-ssws
 wget -O renew-ssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/renew-ssws.sh" && chmod +x renew-ssws
 wget -O cek-ssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/cek-ssws.sh" && chmod +x cek-ssws
+wget -O xp-ssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/xp-ssws.sh" && chmod +x xp-ssws
 
 # Auto Cek AKUN Exp
 wget -O cek-xp "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/cek-xp.sh" && chmod +x cek-xp
