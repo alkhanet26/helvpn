@@ -7,6 +7,7 @@ if [ $MYIP = $IZIN ]; then
 echo -e "\e[32mPermission Accepted...\e[0m"
 else
 echo -e "\e[31mPermission Denied!\e[0m";
+echo -e "\e[31mSilahkan Hubungi ALK-NET untuk Extend IP.. #\e[0m"
 exit 0
 fi
 #EXPIRED
