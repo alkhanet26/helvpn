@@ -42,6 +42,10 @@ chown www-data.www-data $domainSock_dir
 # Make Folder XRay
 mkdir -p /var/log/xray
 mkdir -p /etc/xray
+mkdir -p /etc/xray/akunlog/vmess
+mkdir -p /etc/xray/akunlog/vless
+mkdir -p /etc/xray/akunlog/ss
+mkdir -p /etc/xray/akunlog/trojan
 chown www-data.www-data /var/log/xray
 chmod +x /var/log/xray
 touch /var/log/xray/access.log
