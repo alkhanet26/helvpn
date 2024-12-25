@@ -42,6 +42,10 @@ chown www-data.www-data $domainSock_dir
 # Make Folder XRay
 mkdir -p /var/log/xray
 mkdir -p /etc/xray
+mkdir -p /etc/xray/akunlog/vmess
+mkdir -p /etc/xray/akunlog/vless
+mkdir -p /etc/xray/akunlog/trojan
+mkdir -p /etc/xray/akunlog/ss
 chown www-data.www-data /var/log/xray
 chmod +x /var/log/xray
 touch /var/log/xray/access.log
@@ -498,6 +502,7 @@ wget -O renew-ws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/
 wget -O del-ws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/del-ws.sh" && chmod +x del-ws
 wget -O cek-ws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/cek-ws.sh" && chmod +x cek-ws
 wget -O xp-ws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/xp-ws.sh" && chmod +x xp-ws
+wget -O con-ws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/con-ws.sh" && chmod +x con-ws
 
 # vless
 wget -O add-vless "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/add-vless.sh" && chmod +x add-vless
@@ -506,6 +511,7 @@ wget -O renew-vless "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xr
 wget -O del-vless "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/del-vless.sh" && chmod +x del-vless
 wget -O cek-vless "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/cek-vless.sh" && chmod +x cek-vless
 wget -O xp-vl "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/xp-vl.sh" && chmod +x xp-vl
+wget -O con-vless "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/con-vless.sh" && chmod +x con-vless
 
 # trojan
 wget -O add-tr "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/add-tr.sh" && chmod +x add-tr
@@ -514,6 +520,7 @@ wget -O del-tr "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/de
 wget -O renew-tr "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/renew-tr.sh" && chmod +x renew-tr
 wget -O cek-tr "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/cek-tr.sh" && chmod +x cek-tr
 wget -O xp-tj "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/xp-tj.sh" && chmod +x xp-tj
+wget -O con-tr "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/con-tr.sh" && chmod +x con-tr
 
 # shadowsocks
 wget -O add-ssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/add-ssws.sh" && chmod +x add-ssws
@@ -522,6 +529,7 @@ wget -O del-ssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/
 wget -O renew-ssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/renew-ssws.sh" && chmod +x renew-ssws
 wget -O cek-ssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/cek-ssws.sh" && chmod +x cek-ssws
 wget -O xp-ssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/xp-ssws.sh" && chmod +x xp-ssws
+wget -O con-ssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/con-ssws.sh" && chmod +x con-ssws
 
 # Auto Cek AKUN Exp
 wget -O cek-xp "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/cek-xp.sh" && chmod +x cek-xp
