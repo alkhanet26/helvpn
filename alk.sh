@@ -242,6 +242,10 @@ sudo dpkg -i gotop_3.0.0_linux_amd64.deb
 sudo rm -r *.deb
 clear
 
+#install WARP
+wget --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/vpsfree/main/warp" -O /usr/bin/warp && chmod +x /usr/bin/warp
+clear
+
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
 
