@@ -538,6 +538,11 @@ echo -e "58 23 * * * root sh /usr/bin/cek-xp" >> /etc/crontab
 systemctl enable cron
 systemctl restart cron
 
+# Cloudflare WARP
+wget -q --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/vpsfree/main/warp" -O /usr/bin/warp && chmod +x /usr/bin/warp
+wget -O m-warp "https://raw.githubusercontent.com/alkhanet26/helvpn/main/menu/m-warp.sh" && chmod +x m-warp
+clear
+
 sleep 1
 yellow() { echo -e "\\033[33;1m${*}\\033[0m"; }
 yellow "xray/Vmess"
