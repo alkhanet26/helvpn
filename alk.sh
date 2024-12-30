@@ -235,6 +235,13 @@ clear
 wget https://raw.githubusercontent.com/alkhanet26/helvpn/main/wg/wg.sh && chmod +x wg.sh && ./wg.sh
 clear
 
+#install gotop
+cd /root
+wget https://github.com/cjbassi/gotop/releases/download/3.0.0/gotop_3.0.0_linux_amd64.deb
+sudo dpkg -i gotop_3.0.0_linux_amd64.deb
+sudo rm -r *.deb
+clear
+
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
 
