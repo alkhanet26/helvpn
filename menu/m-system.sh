@@ -57,7 +57,7 @@ case $opt in
 8) clear ; nano /etc/issue.net ; exit ;; #ssh-vpn banner.conf
 9) clear ; bw ; exit ;;
 10) clear ; gotop ; exit ;;
-11) clear ; warp ; exit ;;
+11) clear ; m-warp ; exit ;;
 0) clear ; menu ; exit ;;
 x) exit ;;
 *) echo -e "" ; echo "Anda salah tekan" ; sleep 1 ; m-system ;;
