@@ -94,8 +94,8 @@ udisk=$(df -h | grep "G" | cut -d'/' -f3 | cut -d' ' -f10)
 # ACCOUNT INFORMATION
 jssh="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 jvms="$(grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq | wc -l)"
-jtj="$(grep -wE "^#! " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq | wc -l)"
-jvls="$(grep -wE "^#& " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq | wc -l)"
+jtj="$(grep -E "^#! " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq | wc -l)"
+jvls="$(grep -E "^#& " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq | wc -l)"
 clear 
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 figlet -f slant "ALK VPN" | lolcat
@@ -121,7 +121,7 @@ echo -e " \E[33m            ACCOUNT INFORMATION       \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e " \e[33mSSH \E[0m: $jssh | \e[33mVMESS \E[0m: $jvms | \e[33mTROJAN \E[0m: $jtj | \e[33mVLESS \E[0m: $jvls"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "                 • PANEL MENU •                 "
+echo -e " \E[33m                 • PANEL MENU •                \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e " [\e[36m•1\e[0m] SSH & OpenVPN Menu : [\e[36m•7\e[0m] Wireguard"
 echo -e " [\e[36m•2\e[0m] Vmess Menu	 : [\e[36m•8\e[0m] SYSTEM Menu"
