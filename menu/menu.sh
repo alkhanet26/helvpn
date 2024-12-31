@@ -95,7 +95,7 @@ echo -e " \E[33m                INFORMATION                            \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\e[33m Operating System     \e[0m:  "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`	
 echo -e "\e[33m CPU Usage            \e[0m:  $cpu_usage1 %"
-echo -e "\e[33m RAM                  \e[0m:  $uram / $tram MB"
+echo -e "\e[33m Memory Usage         \e[0m:  $uram / $tram MB"
 echo -e "\e[33m System Uptime        \e[0m:  $uptime "
 echo -e "\e[33m Isp Name             \e[0m:  $ISP"
 echo -e "\e[33m Domain               \e[0m:  $domain"
