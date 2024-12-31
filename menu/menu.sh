@@ -87,6 +87,10 @@ freq=$( awk -F: ' /cpu MHz/ {freq=$2} END {print freq}' /proc/cpuinfo )
 tram=$( free -m | awk 'NR==2 {print $2}' )
 uram=$( free -m | awk 'NR==2 {print $3}' )
 fram=$( free -m | awk 'NR==2 {print $4}' )
+# DISK Information
+pdisk=$(df -h | grep "G" | cut -d'/' -f3 | cut -d' ' -f14)
+tdisk=$(df -h | grep "G" | cut -d'/' -f3 | cut -d' ' -f8)
+udisk=$(df -h | grep "G" | cut -d'/' -f3 | cut -d' ' -f10)
 clear 
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 figlet -f slant "ALK VPN" | lolcat
@@ -96,6 +100,7 @@ echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━�
 echo -e "\e[33m Operating System     \e[0m:  "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`	
 echo -e "\e[33m CPU Usage            \e[0m:  $cpu_usage1 %"
 echo -e "\e[33m Memory Usage         \e[0m:  $uram / $tram MB"
+echo -e "\e[33m Disk Usage           \e[0m:  $udisk / $tdisk ($pdisk)"
 echo -e "\e[33m System Uptime        \e[0m:  $uptime "
 echo -e "\e[33m Isp Name             \e[0m:  $ISP"
 echo -e "\e[33m Domain               \e[0m:  $domain"
