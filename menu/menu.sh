@@ -91,11 +91,16 @@ fram=$( free -m | awk 'NR==2 {print $4}' )
 pdisk=$(df -h | grep "G" | cut -d'/' -f3 | cut -d' ' -f14)
 tdisk=$(df -h | grep "G" | cut -d'/' -f3 | cut -d' ' -f8)
 udisk=$(df -h | grep "G" | cut -d'/' -f3 | cut -d' ' -f10)
+# ACCOUNT INFORMATION
+jssh="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
+jvms="$(grep -wE "^### $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq | wc -l)"
+jtj="$(grep -wE "^#! $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq | wc -l)"
+jvls="$(grep -wE "^#& $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq |wc -l)"
 clear 
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 figlet -f slant "ALK VPN" | lolcat
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e " \E[33m                INFORMATION                            \E[0m"
+echo -e " \E[33m                INFORMATION              \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\e[33m Operating System     \e[0m:  "`hostnamectl | grep "Operating System" | cut -d ' ' -f5-`	
 echo -e "\e[33m CPU Usage            \e[0m:  $cpu_usage1 %"
@@ -106,6 +111,16 @@ echo -e "\e[33m Isp Name             \e[0m:  $ISP"
 echo -e "\e[33m Domain               \e[0m:  $domain"
 echo -e "\e[33m Ip Vps               \e[0m:  $IPVPS"	
 echo -e "\e[33m Usage This month     \e[0m:  $tmon"	
+echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e " \E[33m                SUBSCRIPTION         \E[0m"
+echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e " \e[33mNama Klien	\E[0m: $Name"
+echo -e " \e[33mExpired 	\E[0m: $Exp2"
+echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e " \E[33m            ACCOUNT INFORMATION       \E[0m"
+echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e " \e[33mSSH   \E[0m: $jssh  |  \e[33mTROJAN \E[0m: $jtj"
+echo -e " \e[33mVMESS \E[0m: $jvms  |  \e[33mVLESS  \E[0m: $jvls"
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "                 • PANEL MENU •                 "
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
@@ -118,9 +133,6 @@ echo -e " [\e[36m•6\e[0m] L2TP"
 echo -e   ""
 echo -e   " Press x or [ Ctrl+C ] • To-Exit-Script"
 echo -e   ""
-echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e " \e[33mNama Klien	\E[0m: $Name"
-echo -e " \e[33mExpired 	\E[0m: $Exp2"
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e   ""
 read -p " Select menu :  "  opt
