@@ -64,6 +64,7 @@ echo -e "Link GRPC      : ${vlesslink3}" | tee -a /etc/xray/akunlog/vless/$user
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xray/akunlog/vless/$user
 echo -e "Expired On     : $exp" | tee -a /etc/xray/akunlog/vless/$user
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xray/akunlog/vless/$user
+echo -e "~ AutoScript by AlkhaNET ~" | tee -a /etc/xray/akunlog/vless/$user
 echo "" | tee -a /etc/xray/akunlog/vless/$user
 read -n 1 -s -r -p "Press any key to back on menu"
 
