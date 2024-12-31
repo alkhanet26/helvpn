@@ -93,9 +93,9 @@ tdisk=$(df -h | grep "G" | cut -d'/' -f3 | cut -d' ' -f8)
 udisk=$(df -h | grep "G" | cut -d'/' -f3 | cut -d' ' -f10)
 # ACCOUNT INFORMATION
 jssh="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
-jvms="$(grep -wE "^### $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq | wc -l)"
-jtj="$(grep -wE "^#! $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq | wc -l)"
-jvls="$(grep -wE "^#& $user" "/etc/xray/config.json" | cut -d ' ' -f 3 | sort | uniq |wc -l)"
+jvms="$(grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq | wc -l)"
+jtj="$(grep -wE "^#! " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq | wc -l)"
+jvls="$(grep -wE "^#& " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq | wc -l)"
 clear 
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 figlet -f slant "ALK VPN" | lolcat
@@ -119,8 +119,8 @@ echo -e " \e[33mExpired 	\E[0m: $Exp2"
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e " \E[33m            ACCOUNT INFORMATION       \E[0m"
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e " \e[33mSSH   \E[0m: $jssh  |  \e[33mTROJAN \E[0m: $jtj"
-echo -e " \e[33mVMESS \E[0m: $jvms  |  \e[33mVLESS  \E[0m: $jvls"
+echo -e " \e[33mSSH   \E[0m: $jssh    |    \e[33mTROJAN \E[0m: $jtj"
+echo -e " \e[33mVMESS \E[0m: $jvms    |    \e[33mVLESS  \E[0m: $jvls"
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "                 • PANEL MENU •                 "
 echo -e "\e[33m ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
