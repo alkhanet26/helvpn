@@ -47,7 +47,7 @@ echo -e "\E[44;1;39m        Xray/Vless Account        \E[0m" | tee -a /etc/xray/
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xray/akunlog/vless/$user
 echo -e "Remarks        : ${user}" | tee -a /etc/xray/akunlog/vless/$user
 echo -e "Domain         : ${domain}" | tee -a /etc/xray/akunlog/vless/$user
-echo -e "Wildcard 	: (bug).${domain}" | tee -a /etc/xray/akunlog/vless/$user
+echo -e "Wildcard       : (bug).${domain}" | tee -a /etc/xray/akunlog/vless/$user
 echo -e "port TLS       : $tls" | tee -a /etc/xray/akunlog/vless/$user
 echo -e "port none TLS  : $none" | tee -a /etc/xray/akunlog/vless/$user
 echo -e "id             : ${uuid}" | tee -a /etc/xray/akunlog/vless/$user
