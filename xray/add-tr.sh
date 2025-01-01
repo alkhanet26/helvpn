@@ -47,7 +47,7 @@ echo -e "\E[0;41;36m           TROJAN ACCOUNT           \E[0m" | tee -a /etc/xra
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xray/akunlog/trojan/$user
 echo -e "Remarks        : ${user}" | tee -a /etc/xray/akunlog/trojan/$user
 echo -e "Host/IP        : ${domain}" | tee -a /etc/xray/akunlog/trojan/$user
-echo -e "Wildcard 	: (bug).${domain}" | tee -a /etc/xray/akunlog/trojan/$user
+echo -e "Wildcard       : (bug).${domain}" | tee -a /etc/xray/akunlog/trojan/$user
 echo -e "port           : 443" | tee -a /etc/xray/akunlog/trojan/$user
 echo -e "Key            : ${uuid}" | tee -a /etc/xray/akunlog/trojan/$user
 echo -e "Path           : /trojan-ws" | tee -a /etc/xray/akunlog/trojan/$user
