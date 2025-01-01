@@ -99,7 +99,7 @@ echo -e "\\E[0;41;36m        Xray/Vmess Account        \E[0m" | tee -a /etc/xray
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m" | tee -a /etc/xray/akunlog/vmess/$user
 echo -e "Remarks        : ${user}" | tee -a /etc/xray/akunlog/vmess/$user
 echo -e "Domain         : ${domain}" | tee -a /etc/xray/akunlog/vmess/$user
-echo -e "Wildcard 	: (bug).${domain}" | tee -a /etc/xray/akunlog/vmess/$user
+echo -e "Wildcard       : (bug).${domain}" | tee -a /etc/xray/akunlog/vmess/$user
 echo -e "Port TLS       : ${tls}" | tee -a /etc/xray/akunlog/vmess/$user
 echo -e "Port none TLS  : ${none}" | tee -a /etc/xray/akunlog/vmess/$user
 echo -e "Port  GRPC     : ${tls}" | tee -a /etc/xray/akunlog/vmess/$user
