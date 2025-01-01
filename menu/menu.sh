@@ -96,6 +96,22 @@ jssh="$(awk -F: '$3 >= 1000 && $1 != "nobody" {print $1}' /etc/passwd | wc -l)"
 jvms="$(grep -E "^### " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq | wc -l)"
 jtj="$(grep -E "^#! " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq | wc -l)"
 jvls="$(grep -E "^#& " "/etc/xray/config.json" | cut -d ' ' -f 2-3 | column -t | sort | uniq | wc -l)"
+# // Xray Proxy
+ss=$( systemctl status xray | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
+if [[ $ss == "running" ]]; then
+    status_ss="${green}ON"
+else
+    status_ss="${red}OFF"
+fi
+
+# // NGINX
+nginx=$( systemctl status nginx | grep Active | awk '{print $3}' | sed 's/(//g' | sed 's/)//g' )
+if [[ $nginx == "running" ]]; then
+    status_nginx="${green}ON"
+else
+    status_nginx="${red}OFF"
+fi
+
 clear 
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 figlet -f slant "ALK VPN" | lolcat
@@ -112,14 +128,16 @@ echo -e "\e[33m Domain               \e[0m:  $domain"
 echo -e "\e[33m Ip Vps               \e[0m:  $IPVPS"	
 echo -e "\e[33m Usage This month     \e[0m:  $tmon"	
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e " \E[33m             • SERVER STATUS •         \E[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "          \e[33mXRAY \E[0m: $status_ss    |    \e[33mNGINX \E[0m: $status_nginx"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "   \e[33mSSH \E[0m: $jssh | \e[33mVMESS \E[0m: $jvms | \e[33mTROJAN \E[0m: $jtj | \e[33mVLESS \E[0m: $jvls"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e " \E[33m               • SUBSCRIPTION •        \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e " \e[33mNama Klien	\E[0m: $Name"
 echo -e " \e[33mExpired 	\E[0m: $Exp2"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e " \E[33m          • ACCOUNT INFORMATION •      \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e " \e[33mSSH \E[0m: $jssh | \e[33mVMESS \E[0m: $jvms | \e[33mTROJAN \E[0m: $jtj | \e[33mVLESS \E[0m: $jvls"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e " \E[33m                • PANEL MENU •                \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
