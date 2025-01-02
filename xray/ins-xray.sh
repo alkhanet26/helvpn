@@ -540,7 +540,7 @@ systemctl enable cron
 systemctl restart cron
 
 # Cloudflare WARP
-wget -q --no-check-certificate "https://raw.githubusercontent.com/alkhanet26/vpsfree/main/warp" -O /usr/bin/warp && chmod +x /usr/bin/warp
+wget -O warp "https://raw.githubusercontent.com/alkhanet26/vpsfree/main/warp" && chmod +x /usr/bin/warp
 wget -O m-warp "https://raw.githubusercontent.com/alkhanet26/helvpn/main/menu/m-warp.sh" && chmod +x m-warp
 clear
 
