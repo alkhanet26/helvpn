@@ -1,4 +1,83 @@
 #!/bin/bash
+
+#STATUS WARP
+function stats(){
+	warp status
+	read -n 1 -s -r -p "Press any key to back on menu"
+	menu
+}
+
+#WG_IPV4
+function ip4(){
+	warp wg4
+	sleep 1
+	sed -i "/exit 0/d" /etc/rc.local
+	sleep 1
+	echo -e "sleep 5 && warp wg4" >> /etc/rc.local
+	echo -e "exit 0" >> /etc/rc.local
+	echo -e " [\e[36m•2\e[0m] Wireguard IPV4 Succesfully Installed"
+	read -n 1 -s -r -p "Press any key to back on menu"
+	menu
+}
+
+#WG_IPV6
+function ip6(){
+	warp wg6
+	sleep 1
+	sed -i "/exit 0/d" /etc/rc.local
+	sleep 1
+	echo -e "sleep 5 && warp wg6" >> /etc/rc.local
+	echo -e "exit 0" >> /etc/rc.local
+	clear
+	echo -e " [\e[36m•2\e[0m] Wireguard IPV6 Succesfully Installed"
+	read -n 1 -s -r -p "Press any key to back on menu"
+	menu
+
+}
+
+#WG_DUAL
+function dual(){
+	warp wg6
+	sleep 1
+	sed -i "/exit 0/d" /etc/rc.local
+	sleep 1
+	echo -e "sleep 5 && warp wgd" >> /etc/rc.local
+	echo -e "exit 0" >> /etc/rc.local
+	echo -e " [\e[36m•2\e[0m] Wireguard IPV4 & IPV6 Succesfully Installed"
+	read -n 1 -s -r -p "Press any key to back on menu"
+	menu
+	
+}
+
+#WG_X
+function x(){
+	warp wgx
+	sleep 1
+	sed -i "/exit 0/d" /etc/rc.local
+	sleep 1
+	echo -e "sleep 5 && warp wgx" >> /etc/rc.local
+	echo -e "exit 0" >> /etc/rc.local
+	echo -e " [\e[36m•2\e[0m] Wireguard X Succesfully Installed"
+	read -n 1 -s -r -p "Press any key to back on menu"
+	menu
+	
+}
+
+#DISABLE_WG
+function dis(){
+	warp dwg
+	sleep 1
+	sed -i "/sleep 5 && warp wg4/d" /etc/rc.local > /dev/null
+	sed -i "/sleep 5 && warp wg6/d" /etc/rc.local > /dev/null
+	sed -i "/sleep 5 && warp wgd/d" /etc/rc.local > /dev/null
+	sed -i "/sleep 5 && warp wgx/d" /etc/rc.local > /dev/null
+	sleep 1
+	echo -e " [\e[36m•2\e[0m] Wireguard Succesfully UnInstalled"
+	read -n 1 -s -r -p "Press any key to back on menu"
+	menu
+	
+}
+
 clear 
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\E[0;100;33m          • Cloudflare WARP Menu •          \E[0m"
@@ -20,12 +99,12 @@ echo -e ""
 read -p " Select menu : " opt
 echo -e ""
 case $opt in
-1) clear ; warp status ; exit ;;
-2) clear ; warp wg4 ; exit ;;
-3) clear ; warp wg6 ; exit ;;
-4) clear ; warp wgd ; exit ;;
-5) clear ; warp wgx ; exit ;;
-6) clear ; warp dwg ; exit ;;
+1) clear ; stats ; exit ;;
+2) clear ; ip4 ; exit ;;
+3) clear ; ip6 ; exit ;;
+4) clear ; dual ; exit ;;
+5) clear ; x ; exit ;;
+6) clear ; dis ; exit ;;
 0) clear ; menu ; exit ;;
 x) exit ;;
 *) echo -e "" ; echo "Anda salah tekan" ; sleep 1 ; m-warp ;;
