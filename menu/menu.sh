@@ -112,6 +112,13 @@ else
     status_nginx="${red}OFF"
 fi
 
+function ceka(){
+        cat /etc/log-create-user.log
+
+        read -n 1 -s -r -p "Press any key to back on menu"
+        menu
+}
+
 clear 
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 figlet -f slant "ALK VPN" | lolcat
@@ -164,7 +171,7 @@ case $opt in
 6) clear ; wgr ;;
 7) clear ; m-system ;;
 8) clear ; running ;;
-9) clear ; cat /etc/log-create-user.log ;;
+9) clear ; ceka ;;
 10) clear ; clearcache ;;
 x) exit ;;
 *) echo "Anda salah tekan " ; sleep 1 ; menu ;;
