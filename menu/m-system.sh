@@ -21,6 +21,12 @@
 #echo -e "\e[31mDaftarkan IP VPS anda,, Hub Admin : ALKNET wa : 08815260626... Salam Ngopi,, #\e[0m"
 #exit 0
 #fi
+function speed(){
+  echo -e "Speedtest"
+  speedtest
+  read -n 1 -s -r -p "Press any key to back on menu"
+  menu
+}
 clear 
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\E[0;100;33m          • SYSTEM MENU •          \E[0m"
@@ -50,7 +56,7 @@ case $opt in
 1) clear ; m-domain ; exit ;;
 2) clear ; port-change ; exit ;;
 3) clear ; m-webmin ; exit ;;
-4) clear ; speedtest ; exit ;;
+4) clear ; speed ; exit ;;
 5) clear ; about ; exit ;;
 6) clear ; auto-reboot ; exit ;;
 7) clear ; restart ; exit ;;
