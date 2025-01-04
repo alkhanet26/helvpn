@@ -32,7 +32,7 @@ function ip4(){
 	sleep 1
 	echo -e "sleep 5 && warp wg4" >> /etc/rc.local
 	echo -e "exit 0" >> /etc/rc.local
-	echo -e " [\e[36m•OK\e[0m] Wireguard IPV4 Succesfully Installed"
+	echo -e " [\e[32m•ON\e[0m] Wireguard IPV4 Succesfully Installed"
 	read -n 1 -s -r -p "Press any key to back on menu"
 	menu
 }
@@ -46,7 +46,7 @@ function ip6(){
 	echo -e "sleep 5 && warp wg6" >> /etc/rc.local
 	echo -e "exit 0" >> /etc/rc.local
 	clear
-	echo -e " [\e[36m•OK\e[0m] Wireguard IPV6 Succesfully Installed"
+	echo -e " [\e[32m•ON\e[0m] Wireguard IPV6 Succesfully Installed"
 	read -n 1 -s -r -p "Press any key to back on menu"
 	menu
 
@@ -60,7 +60,7 @@ function dual(){
 	sleep 1
 	echo -e "sleep 5 && warp wgd" >> /etc/rc.local
 	echo -e "exit 0" >> /etc/rc.local
-	echo -e " [\e[36m•OK\e[0m] Wireguard IPV4 & IPV6 Succesfully Installed"
+	echo -e " [\e[32m•ON\e[0m] Wireguard IPV4 & IPV6 Succesfully Installed"
 	read -n 1 -s -r -p "Press any key to back on menu"
 	menu
 	
@@ -74,7 +74,7 @@ function x(){
 	sleep 1
 	echo -e "sleep 5 && warp wgx" >> /etc/rc.local
 	echo -e "exit 0" >> /etc/rc.local
-	echo -e " [\e[36m•OK\e[0m] Wireguard X Succesfully Installed"
+	echo -e " [\e[32m•ON\e[0m] Wireguard X Succesfully Installed"
 	read -n 1 -s -r -p "Press any key to back on menu"
 	menu
 	
@@ -89,7 +89,7 @@ function dis(){
 	sed -i "/sleep 5 && warp wgd/d" /etc/rc.local > /dev/null
 	sed -i "/sleep 5 && warp wgx/d" /etc/rc.local > /dev/null
 	sleep 1
-	echo -e " [\e[36m•OK\e[0m] Wireguard Succesfully UnInstalled"
+	echo -e " [\e[31m•OFF\e[0m] Wireguard Succesfully UnInstalled"
 	read -n 1 -s -r -p "Press any key to back on menu"
 	menu
 	
