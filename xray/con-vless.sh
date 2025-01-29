@@ -38,7 +38,7 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^#& " "/etc/xray/config.json")
     if [ -z $user ]; then
     menu
     else
-    cat/xray/akunlog/vless/$user
+    cat /eyc/xray/akunlog/vless/$user
     read -n 1 -s -r -p "Press any key to back on menu"
     menu
     fi
