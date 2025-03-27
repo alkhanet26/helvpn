@@ -153,7 +153,7 @@ echo -e " [\e[36m•2\e[0m] Vmess Menu	 : [\e[36m•7\e[0m] SYSTEM Menu"
 echo -e " [\e[36m•3\e[0m] Vless Menu	 : [\e[36m•8\e[0m] Status Service"
 echo -e " [\e[36m•4\e[0m] Shadowsocks GRPC	 : [\e[36m•9\e[0m] Check Account"
 echo -e " [\e[36m•5\e[0m] Trojan WSxGRPC	 : [\e[36m•10\e[0m] Clear RAM Cache"
-#echo -e " [\e[36m•6\e[0m] L2TP"
+echo -e " [\e[36m•11\e[0m] L2TP"
 echo -e   ""
 echo -e   " Press x or [ Ctrl+C ] • To-Exit-Script"
 echo -e   ""
@@ -167,12 +167,12 @@ case $opt in
 3) clear ; m-vless ;;
 4) clear ; m-ssws ;;
 5) clear ; m-trojan ;;
-#6) clear ; l2tp ;;
 6) clear ; wgr ;;
 7) clear ; m-system ;;
 8) clear ; running ;;
 9) clear ; ceka ;;
 10) clear ; clearcache ;;
+11) clear ; l2tp ;;
 x) exit ;;
 *) echo "Anda salah tekan " ; sleep 1 ; menu ;;
 esac
