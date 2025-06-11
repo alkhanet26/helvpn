@@ -41,7 +41,7 @@ sudo apt install -y screen curl jq bzip2 gzip coreutils rsyslog iftop \
 curl -sSL https://deb.nodesource.com/setup_20.x | bash - 
 sudo apt-get install nodejs -y
 
-sudo apt-get -y install vnstat
+apt -y install vnstat
 /etc/init.d/vnstat restart
 apt -y install libsqlite3-dev
 #wget -q https://humdi.net/vnstat/vnstat-2.6.tar.gz
