@@ -217,16 +217,16 @@ clear
 wget https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
 wget https://raw.githubusercontent.com/alkhanet26/helvpn/main/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
-install sstp
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "$green      Install SSTP & L2TP              $NC"
-echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-sleep 2
-clear
-wget https://raw.githubusercontent.com/alkhanet26/helvpn/main/sstp/sstp.sh && chmod +x sstp.sh && ./sstp.sh
-wget https://raw.githubusercontent.com/alkhanet26/helvpn/main/l2tp/ipsec.sh && chmod +x ipsec.sh && ./ipsec.sh
-clear
-install sstp
+#install sstp
+#echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+#echo -e "$green      Install SSTP & L2TP              $NC"
+#echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+#sleep 2
+#clear
+#wget https://raw.githubusercontent.com/alkhanet26/helvpn/main/sstp/sstp.sh && chmod +x sstp.sh && ./sstp.sh
+#wget https://raw.githubusercontent.com/alkhanet26/helvpn/main/l2tp/ipsec.sh && chmod +x ipsec.sh && ./ipsec.sh
+#clear
+#install wireguard
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "$green      Install WIREGUARD              $NC"
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
