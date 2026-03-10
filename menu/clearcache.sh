@@ -30,14 +30,14 @@ sleep 3
 echo -e "[ \033[32mok\033[0m ] Cache cleared"
 sleep 1
 echo -e "[ \033[32mInfo\033[0m ] Clear LOG FILE"
-#rm -r /var/log/xray/*.log 
+rm -r /var/log/xray/*.log 
 sleep 3
-#chmod +x /var/log/xray
-#touch /var/log/xray/access.log
-#touch /var/log/xray/error.log
-#touch /var/log/xray/access2.log
-#touch /var/log/xray/error2.log
-#sleep 1
+chmod +x /var/log/xray
+touch /var/log/xray/access.log
+touch /var/log/xray/error.log
+touch /var/log/xray/access2.log
+touch /var/log/xray/error2.log
+sleep 1
 systemctl restart xray
 sleep 3
 echo -e "[ \033[32mok\033[0m ] LOG cleared"
