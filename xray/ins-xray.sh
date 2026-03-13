@@ -535,7 +535,7 @@ wget -O con-ssws "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/
 wget -O cek-xp "https://raw.githubusercontent.com/alkhanet26/helvpn/main/xray/cek-xp.sh" && chmod +x cek-xp
 sleep 2
 echo -e "58 23 * * * root sh /usr/bin/cek-xp" >> /etc/crontab
-#echo -e "5 0 * * * root clearcache" >> /etc/crontab
+echo -e "5 0 * * * root clearcache" >> /etc/crontab
 systemctl enable cron
 systemctl restart cron
 
