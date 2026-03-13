@@ -30,7 +30,9 @@ sleep 3
 echo -e "[ \033[32mok\033[0m ] Cache cleared"
 sleep 1
 echo -e "[ \033[32mInfo\033[0m ] Clear LOG FILE"
-echo -e "cleanup log" > /var/log/xray/*.log 
+echo -e "cleanup log" > /var/log/xray/access.log
+sleep 1
+echo -e "cleanup log" > /var/log/xray/error.log
 sleep 3
 #systemctl restart xray
 #sleep 3
