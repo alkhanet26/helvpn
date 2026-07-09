@@ -37,32 +37,32 @@ res="Permission Accepted..."
 fi
 }
 
-PERMISSION () {
-    MYIP=$(curl -sS ipv4.icanhazip.com)
-    IZIN=$(curl -sS https://raw.githubusercontent.com/alkhanet26/bacot/main/mangga | awk '{print $4}' | grep $MYIP)
-    if [ "$MYIP" = "$IZIN" ]; then
-    Bloman
-    else
-    res="Permission Denied!"
-    fi
-    BURIQ
-}
+#PERMISSION () {
+#    MYIP=$(curl -sS ipv4.icanhazip.com)
+#    IZIN=$(curl -sS https://raw.githubusercontent.com/alkhanet26/bacot/main/mangga | awk '{print $4}' | grep $MYIP)
+#    if [ "$MYIP" = "$IZIN" ]; then
+#    Bloman
+#    else
+#    res="Permission Denied!"
+#    fi
+#    BURIQ
+#}
 
 red='\e[1;31m'
 green='\e[0;32m'
 NC='\e[0m'
 green() { echo -e "\\033[32;1m${*}\\033[0m"; }
 red() { echo -e "\\033[31;1m${*}\\033[0m"; }
-PERMISSION
-if [ -f /home/needupdate ]; then
-red "Your script need to update first !"
-exit 0
-elif [ "$res" = "Permission Accepted..." ]; then
-echo -ne
-else
-red "Permission Denied!"
-exit 0
-fi
+#PERMISSION
+#if [ -f /home/needupdate ]; then
+#red "Your script need to update first !"
+#exit 0
+#elif [ "$res" = "Permission Accepted..." ]; then
+#echo -ne
+#else
+#red "Permission Denied!"
+#exit 0
+#fi
 
 clear
 echo " "
