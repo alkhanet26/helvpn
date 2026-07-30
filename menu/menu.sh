@@ -24,7 +24,7 @@ MYIP=$(curl -sS ipv4.icanhazip.com)
 #	fi
 #done < /root/expired.txt
 #rm /root/expired.txt
-#Name=$(curl -sS https://raw.githubusercontent.com/alkhanet26/bacot/main/mangga | grep $MYIP | awk '{print $2}')
+Name=$(curl -sS https://raw.githubusercontent.com/alkhanet26/bacot/main/mangga | grep $MYIP | awk '{print $2}')
 # Color Validation
 DF='\e[39m'
 Bold='\e[1m'
@@ -144,7 +144,7 @@ echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━�
 echo -e " \E[33m               • SUBSCRIPTION •        \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e " \e[33mNama Klien	\E[0m: $Name"
-echo -e " \e[33mExpired 	\E[0m: $Exp2"
+echo -e " \e[33mExpired 	\E[0m: Lifetime"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e " \E[33m                • PANEL MENU •                \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
