@@ -46,7 +46,7 @@ mkdir -p /etc/xray/akunlog/vmess
 mkdir -p /etc/xray/akunlog/vless
 mkdir -p /etc/xray/akunlog/trojan
 mkdir -p /etc/xray/akunlog/ss
-chown www-data.www-data /var/log/xray
+chown www-data:www-data /var/log/xray
 chmod +x /var/log/xray
 touch /var/log/xray/access.log
 touch /var/log/xray/error.log
