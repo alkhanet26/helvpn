@@ -38,7 +38,7 @@ apt install curl pwgen openssl netcat cron -y
 sleep 1
 echo -e "[ ${green}INFO$NC ] Downloading & Installing xray core"
 domainSock_dir="/run/xray";! [ -d $domainSock_dir ] && mkdir  $domainSock_dir
-chown www-data.www-data $domainSock_dir
+chown www-data:www-data $domainSock_dir
 # Make Folder XRay
 mkdir -p /var/log/xray
 mkdir -p /etc/xray
