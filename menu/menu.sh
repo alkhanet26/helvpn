@@ -75,7 +75,7 @@ tmon="$(vnstat -i eth0 -m | grep "`date +"%Y-%m"`" | awk '{print $8" "substr ($9
 cpu_usage1="$(ps aux | awk 'BEGIN {sum=0} {sum+=$3}; END {print sum}')"
 cpu_usage="$((${cpu_usage1/\.*} / ${corediilik:-1}))"
 cpu_usage+=" %"
-ISP=$(whois $(curl -s https://api.ipify.org) | grep -iE "orgname|netname|descr")
+ISP=$(whois $(curl -s https://api.ipify.org) | grep -iE "orgname|netname|descr" | cut -d " " -f9)
 #CITY=$(curl -s ipinfo.io/city )
 #WKT=$(curl -s ipinfo.io/timezone )
 DAY=$(date +%A)
